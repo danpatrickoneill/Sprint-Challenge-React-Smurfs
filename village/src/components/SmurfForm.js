@@ -20,6 +20,7 @@ class SmurfForm extends Component {
         height: this.state.height
       };
       this.props.addSmurf(newSmurf);
+      this.props.history.push("/");
 
       // Reset form and state
       event.target.reset();

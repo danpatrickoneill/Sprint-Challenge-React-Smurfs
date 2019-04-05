@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -42,25 +43,25 @@ class SmurfForm extends Component {
     return (
       <div className="SmurfForm">
         <form onSubmit={this.addSmurf}>
-          <input
+          <Input
             onChange={this.handleInputChange}
-            placeholder="name"
+            placeholder="Name"
             value={this.state.name}
             name="name"
           />
-          <input
+          <Input
             onChange={this.handleInputChange}
             placeholder="age"
             value={this.state.age}
-            name="age"
+            name="Age"
           />
-          <input
+          <Input
             onChange={this.handleInputChange}
             placeholder="height"
             value={this.state.height}
-            name="height"
+            name="Height"
           />
-          <button type="submit">Add to the village</button>
+          <SmurfButton type="submit">Add to the village</SmurfButton>
         </form>
       </div>
     );
@@ -68,3 +69,22 @@ class SmurfForm extends Component {
 }
 
 export default SmurfForm;
+
+const Input = styled.input`
+  padding-left: 5px;
+  margin-right: 10px;
+  line-height: 1.5;
+`;
+
+const SmurfButton = styled.button`
+  background: #88ccff;
+  color: white;
+
+  padding: 10px;
+  border-radius: 15px;
+
+  &:hover {
+    background: white;
+    color: #88ccff;
+  }
+`;

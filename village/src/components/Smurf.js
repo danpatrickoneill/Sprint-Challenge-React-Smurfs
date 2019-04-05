@@ -29,7 +29,11 @@ Smurf.defaultProps = {
 export default Smurf;
 
 const SmurfDiv = styled.div`
-  margin: 0 auto;
+  width: 25%;
+  margin: 0 auto 10px;
+  padding-bottom: 20px;
+
+  border: 2px dotted #88ccff;
 `;
 
 const Button = styled.button`

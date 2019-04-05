@@ -51,8 +51,7 @@ export default SingleSmurf;
 const SmurfDiv = styled.div`
   margin: 0 auto;
 `;
-
-const Button = styled.button`
+const SmurfButton = styled.button`
   background: #88ccff;
   color: white;
 
@@ -60,7 +59,7 @@ const Button = styled.button`
   border-radius: 15px;
 
   &:hover {
-    background: orangered;
+    background: white;
     color: #88ccff;
   }
 `;

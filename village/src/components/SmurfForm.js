@@ -1,25 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      age: '',
-      height: ''
+      name: "",
+      age: "",
+      height: ""
     };
   }
 
   addSmurf = event => {
     event.preventDefault();
     // add code to create the smurf using the api
+    if (this.state.name && this.state.age && this.state.height) {
+      const newSmurf = {
+        name: this.state.name,
+        age: this.state.age,
+        height: this.state.height
+      };
+      this.props.addSmurf(newSmurf);
 
-    this.setState({
-      name: '',
-      age: '',
-      height: ''
-    });
-  }
+      // Reset form and state
+      event.target.reset();
+      this.setState({
+        name: "",
+        age: "",
+        height: ""
+      });
+    } else {
+      alert("Please complete form before submission");
+    }
+  };
 
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });

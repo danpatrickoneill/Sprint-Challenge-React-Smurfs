@@ -104,6 +104,7 @@ export default App;
 const SmurfH1 = styled.h1`
   color: #88ccff;
   font-size: 54px;
+  text-decoration: underline;
 `;
 
 const NavBar = styled.nav`

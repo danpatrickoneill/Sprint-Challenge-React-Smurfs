@@ -45,6 +45,6 @@ const Button = styled.button`
 
   &:hover {
     background: orangered;
-    color: #88ccff;
+    color: white;
   }
 `;

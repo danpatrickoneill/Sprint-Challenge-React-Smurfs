@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Route, NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 import "./App.css";
 import SmurfForm from "./components/SmurfForm";
@@ -66,12 +67,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navBar">
+        <SmurfH1>Smurf Village</SmurfH1>
+        <NavBar>
           <NavLink exact to="/">
-            Smurfs
+            <button>Smurfs</button>
           </NavLink>
-          <NavLink to="/smurf-form">Smurf Smurf</NavLink>
-        </nav>
+          <NavLink to="/smurf-form">
+            <button>Smurf Smurf</button>
+          </NavLink>
+        </NavBar>
         <Route
           path="/smurf-form"
           render={props => <SmurfForm {...props} addSmurf={this.addSmurf} />}
@@ -94,3 +98,30 @@ class App extends Component {
 }
 
 export default App;
+
+const SmurfH1 = styled.h1`
+  color: #88ccff;
+  font-size: 54px;
+`;
+
+const NavBar = styled.nav`
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+
+  button {
+    background: #88ccff;
+    color: white;
+
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 15px;
+
+    &:hover {
+      background: white;
+      color: #88ccff;
+    }
+  }
+`;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Smurf = props => {
@@ -8,12 +9,14 @@ const Smurf = props => {
   };
 
   return (
-    <SmurfDiv className="Smurf">
-      <h3>{props.name}</h3>
-      <strong>{props.height} tall</strong>
-      <p>{props.age} smurf years old</p>
-      <Button onClick={deleteSmurf}>Kill Smurf</Button>
-    </SmurfDiv>
+    <Link to={`/smurf/${props.id}`}>
+      <SmurfDiv className="Smurf">
+        <h3>{props.name}</h3>
+        <strong>{props.height} tall</strong>
+        <p>{props.age} smurf years old</p>
+        <Button onClick={deleteSmurf}>Kill Smurf</Button>
+      </SmurfDiv>
+    </Link>
   );
 };
 

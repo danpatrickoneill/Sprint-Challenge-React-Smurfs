@@ -6,6 +6,7 @@ import styled from "styled-components";
 import "./App.css";
 import SmurfForm from "./components/SmurfForm";
 import Smurfs from "./components/Smurfs";
+import SingleSmurf from "./components/SingleSmurf";
 
 class App extends Component {
   constructor(props) {
@@ -92,6 +93,7 @@ class App extends Component {
             />
           )}
         />
+        <Route path="/smurf/:id" component={SingleSmurf} />
       </div>
     );
   }

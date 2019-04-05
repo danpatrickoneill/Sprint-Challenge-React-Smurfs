@@ -9,14 +9,14 @@ const Smurf = props => {
   };
 
   return (
-    <Link to={`/smurf/${props.id}`}>
-      <SmurfDiv className="Smurf">
+    <SmurfDiv className="Smurf">
+      <Link to={`/smurf/${props.id}`}>
         <h3>{props.name}</h3>
-        <strong>{props.height} tall</strong>
-        <p>{props.age} smurf years old</p>
-        <Button onClick={deleteSmurf}>Kill Smurf</Button>
-      </SmurfDiv>
-    </Link>
+      </Link>
+      <strong>{props.height} tall</strong>
+      <p>{props.age} smurf years old</p>
+      <Button onClick={deleteSmurf}>Kill Smurf</Button>
+    </SmurfDiv>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 import Smurf from "./Smurf";
 
@@ -6,7 +7,7 @@ class Smurfs extends Component {
   render() {
     return (
       <div className="Smurfs">
-        <ul>
+        <Smurful>
           {this.props.smurfs.map(smurf => {
             return (
               <Smurf
@@ -19,7 +20,7 @@ class Smurfs extends Component {
               />
             );
           })}
-        </ul>
+        </Smurful>
       </div>
     );
   }
@@ -30,3 +31,7 @@ Smurf.defaultProps = {
 };
 
 export default Smurfs;
+
+const Smurful = styled.ul`
+  padding-left: 0;
+`;

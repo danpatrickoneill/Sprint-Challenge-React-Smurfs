@@ -111,6 +111,11 @@ const NavBar = styled.nav`
   justify-content: space-around;
   margin-bottom: 40px;
 
+  .active button {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
   button {
     background: #88ccff;
     color: white;
